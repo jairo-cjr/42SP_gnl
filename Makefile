@@ -6,7 +6,7 @@
 #    By: jcaetano <jcaetano@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 11:27:50 by jcaetano          #+#    #+#              #
-#    Updated: 2021/10/08 13:42:28 by jcaetano         ###   ########.fr        #
+#    Updated: 2021/10/08 17:04:16 by jcaetano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,22 +18,29 @@ SRCS = ./test/main.c \
         get_next_line.c \
 		get_next_line_utils.c
 
+SRCS_BONUS = ./test/main.c \
+        get_next_line_bonus.c \
+		get_next_line_utils_bonus.c
+
 OUTPUT = ./test/a.out
 
 all:
 	${comp} -fsanitize=address -o ${OUTPUT}
 
-comp:
+c:
 	${CC} ${CFLAGS} ${SRCS}
 
-val: comp
+b:
+	${CC} ${CFLAGS} ${SRCS_BONUS} -o ${OUTPUT}
+
+v: comp
 	valgrind --leak-check=yes -s ${OUTPUT}
 
-run: all
+r: all
 	clear
 	${OUTPUT}
 
-tripo:
+t:
 	git clone git@github.com:Tripouille/gnlTester.git
 
-.PHONY: all val run comp
+.PHONY: all c b v r t
