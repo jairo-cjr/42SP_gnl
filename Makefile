@@ -33,4 +33,7 @@ run: all
 	clear
 	${OUTPUT}
 
+tripo:
+	git clone git@github.com:Tripouille/gnlTester.git
+
 .PHONY: all val run comp
