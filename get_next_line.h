@@ -6,14 +6,13 @@
 /*   By: jcaetano <jcaetano@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 06:50:41 by jcaetano          #+#    #+#             */
-/*   Updated: 2021/10/07 08:30:47 by jcaetano         ###   ########.fr       */
+/*   Updated: 2021/10/08 14:18:05 by jcaetano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-#include <stdio.h> // remover
 # include <unistd.h>
 # include <stdlib.h>
 
